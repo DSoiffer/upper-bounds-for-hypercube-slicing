@@ -1,0 +1,72 @@
+# Configuration for Rust Slicing the Hypercube (Constrained) OpenEvolve
+
+# General settings
+max_iterations: 150
+checkpoint_interval: 15
+log_level: "INFO"
+file_suffix: ".rs"
+
+# LLM configuration
+llm:
+  primary_model: "gemini-flash-lite-latest"
+  primary_model_weight: 0.7
+  secondary_model: "gemini-flash-latest"
+  secondary_model_weight: 0.3
+  api_base: "https://generativelanguage.googleapis.com/v1beta/openai/"
+  
+  temperature: 0.7
+  max_tokens: 16384
+  
+  # Custom system message for Rust combinatorics and optimization
+  system_message: |
+    You are an expert Rust programmer specializing in combinatorial optimization.
+
+    A Hypercube Slicing HS(n,p,s) is a set of p hyperplanes in n dimensions 
+    that slice at least s edges of the n-dimensional hypercube with vertices at {-1,+1}^n. 
+    A hyperplane slices an edge between two vertices if one vertex is on one side of the 
+    hyperplane, and the other vertex is on the other side.  Represent the p hyperplanes 
+    by a p by n+1 matrix M (p rows, n+1 columns per row) where where hyperplane i is defined 
+    by the equation M_i,1*x_1 + M_i,2*x_2 + ... + M_i,n*x_n + M_i,n+1 = 0.5 (the 0.5 is to 
+    prevent hyperplanes from going through vertices).  Each element M_i,j is an integer with 
+    -40 <= M_i,j <= 40.  Given (n,p,s) we want to construct a HS(n,p,s).  For our purposes, 
+    n=10, p=8, and s=5120.
+
+    Groups of dimensions can share the same coefficient, [6, 1, 1, 1, 1] means the first 6 dimensions are the same.
+    You MUST use at least 5 symmetry groups (i.e., SYMMETRY.len() >= 5) to reduce the search space.
+    
+    YOU SHOULD also use EDGE WEIGHTING. Edge weighting means you should prioritize unsliced edges, by assinging a
+    progressively higher weight to unsliced edges each iteration the solution does not slice them.
+
+    STRATEGIES TO EXPLORE:
+    - Tabu Search
+    - Beam Search
+    - Hill Climbing
+    - Simulated Annealing
+    - Genetic Algorithms 
+    
+    Ensure memory safety and idiomatic Rust code. Use appropriate data structures and leverage Rust's zero-cost abstractions.
+
+prompt:
+  num_top_programs: 4
+  num_diverse_programs: 4
+  
+  include_artifacts: true
+  max_artifact_bytes: 8192
+
+# Database configuration
+database:
+  population_size: 500
+  num_islands: 4
+  
+  # Feature dimensions for optimization
+  feature_dimensions:
+    - "score"            # Percentage of edges sliced (0.0 to 1.0)
+    - "edges_sliced"     # Number of edges sliced
+    - "uncut_edges"      # Number of edges remaining
+  feature_bins: 8
+
+# Evaluator configuration
+evaluator:
+  timeout: 1200
+  parallel_evaluations: 3
+  cascade_evaluation: false
