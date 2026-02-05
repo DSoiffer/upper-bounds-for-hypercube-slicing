@@ -90,6 +90,6 @@ MEM_LIMIT = 3 # memory limit per process, in GB.  Integers only.  Should be less
 # Use value "None" for ablation tests.
 RUN_STAGES = {"strategies": True,  # True = start run from scratch, gathering strategies and details and candidate code.  False = read from existing candidates*pkl
               "hypertune": True,  # True = hyperparameter tuning active.  False = read from existing hyperresults*pkl.  None = ablated - read preexisting hyperresults*.pkl and update it as if SHORTFLAG had been true.
-              "prog_opt_prompt_eval": False, # True = generate and test optimization candidates.  False = read from existing optresults*.pkl.  None = ablated; skip optimization.
+              "prog_opt_prompt_eval": None, # True = generate and test optimization candidates.  False = read from existing optresults*.pkl.  None = ablated; skip optimization.
               "full_dev_set": True,  # True = test for FULL_DEV_TIME on NUM_SELECT final candidates.  False = read from existing fullresults*.pkl.  None = ablated; skip and go with existing short timings.
               "open_problems": True} # should always be True
