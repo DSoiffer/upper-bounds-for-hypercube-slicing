@@ -1,5 +1,5 @@
 """
-Evaluator for Rust adaptive sorting example
+Evaluator for Rust Slicing the Hypercube with OpenEvolve (constrained)
 """
 
 import asyncio
@@ -13,7 +13,7 @@ import os
 
 THIS_FILE_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
 
-logger = logging.getLogger("examples.rust_hypercube.evaluator")
+logger = logging.getLogger("examples.rust_hypercube_constrained.evaluator")
 
 
 

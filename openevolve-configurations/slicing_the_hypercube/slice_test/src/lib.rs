@@ -1,3 +1,4 @@
+// Slicing the Hypercube
 // Find hyperplanes that slice all edges of a 10-dimensional hypercube
 
 use rand::prelude::*;
@@ -49,8 +50,8 @@ fn generate_random_plane(rng: &mut impl Rng, dim: usize, max_coeff: i32) -> Vec<
     }
     plane
 }
+// EVOLVE-BLOCK-END
 
-// Helper function to count uncut edges
 pub fn count_uncut(planes: &[Vec<i32>], dim: usize) -> usize {
     let num_vertices = 1 << dim;
     let mut uncut = 0;
@@ -77,7 +78,6 @@ pub fn count_uncut(planes: &[Vec<i32>], dim: usize) -> usize {
     uncut
 }
 
-// Helper function to evaluate a plane at a vertex
 pub fn eval_vertex(plane: &[i32], vertex_bits: usize, dim: usize) -> i32 {
     let mut sum = plane[dim];
     for d in 0..dim {
@@ -86,7 +86,6 @@ pub fn eval_vertex(plane: &[i32], vertex_bits: usize, dim: usize) -> i32 {
     }
     sum
 }
-// EVOLVE-BLOCK-END
 
 #[derive(Debug)]
 pub struct BenchmarkResults {

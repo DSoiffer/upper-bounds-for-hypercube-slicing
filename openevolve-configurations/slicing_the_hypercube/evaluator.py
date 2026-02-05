@@ -1,5 +1,5 @@
 """
-Evaluator for Rust adaptive sorting example
+Evaluator for Rust Slicing the Hypercube with OpenEvolve
 """
 
 import asyncio
