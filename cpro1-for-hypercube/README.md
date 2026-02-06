@@ -8,8 +8,8 @@ It was run using the OpenAI o4-mini model: MODEL="o4-mini-2025-04-16"
 Put the following two files in the directory where you will run, replacing the versions you got from the CPro1 repository:
 
 `conf.py` here has the setup for hypercube edge slicing.  It matches defaults, except:
-- It uses a new PROMPT_NOVELTY features.
-- It generates only 200 programs per run, rather than 1000.
+- It uses a new PROMPT_NOVELTY feature.
+- It generates only 200 programs per run, rather than 1000. (A total of 5 runs were done for the paper, for a total of 1000 programs.)
 - The code optimization step is turned off, to save on tokens.
 - It selects 15 programs for final testing against the dev set, rather than just 5.  This didn't actually seem to be necessary though.
 
