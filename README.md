@@ -22,3 +22,10 @@ The remaining arguments are hyperparameters which we recommend specifying:
 - weight_increment: amount to increase weights, we recommend 1
 - restart_period: iterations before random restart, we recommend 200000 for $n$ < 11, and 5000000 otherwise
 - weight_cap: maximum weight value, we recommend 1000
+
+
+### CPro1, OpenEvolve Configurations
+The configurations we used for CPro1 and OpenEvolve are given, as well as additional instructions, in their respective directories.
+
+### List of Constructions
+The collections of planes accompanying every result given in the paper are listed in `results.txt`, format: `n k [number of edges sliced]` followed by the collection of $k$ planes which slices that many edges of the $n$-dimensional hypercube.
