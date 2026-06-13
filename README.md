@@ -29,3 +29,6 @@ The configurations we used for CPro1 and OpenEvolve are given, as well as additi
 
 ### List of Constructions
 The collections of planes accompanying every result given in the paper are listed in `results.txt`, format: `n k [number of edges sliced]` followed by the collection of $k$ planes which slices that many edges of the $n$-dimensional hypercube.
+
+### Solution Verification
+In addition to the code here, an interactive website for inspecting and verifying solutions more closely is provided at [hypercube-slicing.pages.dev].
