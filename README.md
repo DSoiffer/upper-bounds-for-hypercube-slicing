@@ -30,5 +30,7 @@ The configurations we used for CPro1 and OpenEvolve are given, as well as additi
 ### List of Constructions
 The collections of planes accompanying every result given in the paper are listed in `results.txt`, format: `n k [number of edges sliced]` followed by the collection of $k$ planes which slices that many edges of the $n$-dimensional hypercube.
 
+Additional constructions are presented in `other_constructions`, including other full constructions, other partial constructions for values of $n, k$ where no full solution is known, and partial constructions which slice many edges in the reduced hypercube but which may not be the best partial solution in the unreduced hypercube. Files are organized by hypercube dimension $n$ and the composition used for the reduced hypercube.
+
 ### Solution Verification
 In addition to the code here, an interactive website for inspecting and verifying solutions more closely is provided at [hypercube-slicing.pages.dev](https://hypercube-slicing.pages.dev).

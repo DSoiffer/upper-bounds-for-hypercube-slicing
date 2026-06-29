@@ -1,0 +1,12 @@
+# 1 solution(s), each slicing 11264 of 11264 edges [FULL]
+# hyperplanes in the form  a.x = c : each row is [a_1 ... a_n  c]; an edge is sliced iff its two endpoints give a.x on opposite sides of c.
+
+8 8 8 8 8 8 8 -10 -9 -12 34 0.5
+8 8 8 8 8 8 8 15 -34 -4 4 0.5
+8 8 8 8 8 8 8 -1 -1 29 26 0.5
+8 8 8 8 8 8 8 -1 19 25 -12 0.5
+8 8 8 8 8 8 8 -33 -13 -12 -5 0.5
+8 8 8 8 8 8 8 40 10 2 5 0.5
+8 8 8 8 8 8 8 3 -12 10 -34 0.5
+8 8 8 8 8 8 8 1 1 -33 -22 0.5
+8 8 8 8 8 8 8 -13 37 -6 3 0.5

@@ -1,0 +1,11 @@
+# 1 solution(s), each slicing 1216 of 1216 reduced edges (partition [4, 1, 1, 1, 1, 1, 1]) [FULL]
+# hyperplanes in the form  a.x = c : each row is [a_1 ... a_n  c]; an edge is sliced iff its two endpoints give a.x on opposite sides of c.
+
+-9 -9 -9 -9 -8 -19 -32 -3 11 2 0.5
+-9 -9 -9 -9 -8 3 -6 32 9 15 0.5
+-9 -9 -9 -9 -7 -3 -4 14 9 -36 0.5
+-9 -9 -9 -9 -9 1 4 -13 9 37 0.5
+-9 -9 -9 -9 -7 33 -15 -1 11 -6 0.5
+-9 -9 -9 -9 -10 -29 21 1 9 5 0.5
+-9 -9 -9 -9 -10 18 30 4 10 -5 0.5
+-9 -9 -9 -9 -8 -2 3 -36 5 -11 0.5

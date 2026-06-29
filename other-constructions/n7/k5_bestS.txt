@@ -1,0 +1,8 @@
+# 1 solution(s), each slicing 440 of 448 edges
+# hyperplanes in the form  a.x = c : each row is [a_1 ... a_n  c]; an edge is sliced iff its two endpoints give a.x on opposite sides of c.
+
+-3 -3 -3 -3 7 4 -3 0.5
+4 4 4 4 -4 0 4 0.5
+-3 -3 -3 -3 -5 4 -7 0.5
+-3 -3 -3 -3 -9 5 4 0.5
+3 3 3 3 -4 -5 -10 0.5
