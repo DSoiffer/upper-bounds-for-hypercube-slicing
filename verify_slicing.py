@@ -66,8 +66,9 @@ if __name__ == "__main__":
     
     # Example: 8 hyperplanes that slice all edges of the 10-cube
     # NOTE: Bias terms are negated here from how they are presented in the paper, since
-    # in the paper the rows represent a1*x1 + ... + an*xn = b, though strictly speaking
-    # it does not make a difference for these fractional offsets which only avoid slicing vertices.
+    # in the paper the rows represent a1*x1 + ... + an*xn = b. Though, strictly speaking
+    # it does not make a difference for this specific example, as the fractional offsets
+    # are to avoid passing exactly through vertices, and no planes pass through vertices here.
     hyperplanes = [
         [-2, -2, -2, -2, -2, -2, 1, 3, -8, -1, -0.5],
         [-2, -2, -2, -2, -2, -2, -1, -3, 8, 1, -0.5],
